@@ -1,0 +1,5 @@
+kingdom_ai_game/.git
+# Ignore the .env file
+kingdom_ai_game/.env
+# Ignore the env directory  in kingdom_ai_game
+kingdom_ai_game/env/*
