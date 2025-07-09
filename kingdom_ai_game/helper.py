@@ -20,3 +20,12 @@ def get_together_api_key():
      load_env()
      together_api_key = os.getenv("TOGETHER_API_KEY")
      return together_api_key
+
+def get_azure_openai_config():
+    load_env()
+    return {
+        "api_key": os.getenv("AZURE_OPENAI_API_KEY"),
+        "azure_endpoint": os.getenv("AZURE_OPENAI_ENDPOINT"),
+        "api_version": os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview"),
+        "deployment": os.getenv("AZURE_OPENAI_DEPLOYMENT", "o4-mini")
+    }
